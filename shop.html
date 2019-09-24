@@ -3,66 +3,51 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Academy: Барбершоп</title>
+	<link rel="stylesheet" type="text/css" href="css/barbershop.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet"> 
 </head>
 <body>
 
-	<header>
-		<nav>
-		<img src="img/logo.svg" width="111" height="24" alt="Логотип Барбершоп"> 
-			<ul> 
-				<li> <a href="index.html"> Информация  </a> </li> 
-				<li> <a href="#news"> Новости  </a>   </li>
-				<li> <a href="price.html"> Праст лист </a> </li>
-				<li> <a href="shop.html"> Магазин  </a>  </li>
-				<li> <a href="#contacts"> Контакты  </a>  </li>
+<header class="main-header">
+		<nav class="main-navigation">
+			<a class="main-logo">  <img src="img/logo.svg" width="111" height="24" alt="лого Барбершоп"> </a>
+			<ul class="site-navigation-list"> 
+				<li class="nav-item"> <a href="index.html"> Информация  </a> </li> 
+				<li class="nav-item"> <a href="#news"> Новости  </a>   </li>
+				<li class="nav-item"> <a href="price.html"> Прайст лист </a> </li>
+				<li class="nav-item celected"> <a href="shop.html"> Магазин  </a>  </li>
+				<li class="nav-item"> <a href="#contacts"> Контакты  </a>  </li>
 			</ul>
 
-			<ul>
-				<li> <a href="login.html"> вход </a> </li>
+			<ul class="site-navigation-list">
+				<li class="nav-item"> <a href="login.html"> вход </a> </li>
 
-	        </ul>
+			</ul>
 
 		</nav>
 	</header>
 
-<body>
-	<main> 
-	<section>
-  		<p>  введите свои логин и пароль</p>
-		<form action="" method="post">
-			<label for="name"> логин </label>
-			<input type="text" name="name1" id="name" placeholder="логин">
-			
 
-			<label for="password"> пароль </label>
-			<input type="password" name="password1" id="password" placeholder="пароль">
+	<main class="index-sections">
+		 
 
-			<label for="remember"> Запомни меня </label>
-			<input type="checkbox" name="remember1" id="remember">
-
-			<a href="#"> Я забыл пароль </a>
-
-			<button type="subbmit"> отправить </button>
-			<button type="button"> закрыть </button>
-
-		</form>
-	</section>
-	
-
-
+		<section class="nav-mini">
 		<h1> Средства для ухода </h1>
 
-		<ul>
+		<ul class="nav-mini-list">
 			<li> <a href="index.html">  Главная    </a> </li>
 			<li> <a href="shop.html">  Магазин  </a> </li>
 			<li> Средства для ухода </li>
 		</ul>
+		</section>
+
+<form action="" method="get">
 
 		<section>
 			<h2 class="visually-hidden"> Фильтр товаров </h2>
-			<form action="" method="get">
-				<fieldset>
-					<legend>  Производители: </legend>
+			
+				<fieldset class="grupp-products">
+					<legend class="list-name">  Производители: </legend>
 					<ul>
 						<label for="Baxter of California"> 
 							<li>  <input type="checkbox" name="Baxter" id="Baxter of California" checked> Baxter of California </li> </label>
@@ -94,9 +79,11 @@
 				</section>
 
 
+
+
 				<section>
-					<fieldset>
-						<legend>  Группы товаров: </legend>
+					<fieldset class="grupp-products">
+						<legend class="list-name">  Группы товаров: </legend>
 						<ul>
 							<label for="shaving accessory">
 								<li> <input type="radio" name="product-grup" id="shaving accessory"> Бритвенные 
@@ -113,40 +100,40 @@
 
 					</fieldset>
 
-					<button type="submit"> показать </button> 
-
-				</form>
+					<button  class="button" type="submit"> показать </button> 
 
 			</section>
 
+</form>
 
 			<section>
 				<h2 class="visually-hidden"> Список средств для поездок </h2>
 
-				<ul>
+				<ul class="product-list">
+
 					<li>
 					 <a href="item.html">
-							<h3> <span> Набор для путешествий </span>
+							<h3> <span class="first"> Набор для путешествий </span>
 							<span> «Baxter of California» </span> </h3>
 							<p> <img src="img/shop-product1.jpg" width="220" height="165" alt="Косметически набор"> </p>
 						  </a> 
 
-							<b> 2900 p </b> 
-							<a href="" aria-label="кнопка купить"> купить </a>
+							<b class="price"> 2900 p </b> 
+							<a  class="buy" href="" aria-label="кнопка купить"> купить </a>
 						</li>
 
 			
 
 				<li>
 				 <a href="#">
-				 <h3> <span>Увлажняющий кондиционер </span>
+				 <h3> <span class="first">Увлажняющий кондиционер </span>
 				 <span> «Baxter of California» </span> </h3>
 
 				<p class=""> <img src="img/shop-product2.jpg" width="220" height="165" alt="кондицеонер"> </p>
 				</a>
 
-				<b> 750 p </b> 
-				<a href="" aria-label="кнопка купить"> купить </a>
+				<b class="price"> 750 p </b> 
+				<a class="buy" href="" aria-label="кнопка купить"> купить </a>
 				</li>
 
 
@@ -154,91 +141,129 @@
 
 				<li>
 				 <a href="#">
-				<h3> <span> Гель для волос </span>
+				<h3> <span class="first"> Гель для волос </span>
 				<span> «SUAVECITO» </span> </h3>	
 
 
 				<p class=""> <img src="img/spo-product3.jpg" width="220" height="165" alt="Гель для волос"> </p>
 			    </a>
 
-				<b> 290 p </b> 
-				<a href="" aria-label="кнопка купить"> купить </a>
+				<b class="price"> 290 p </b> 
+				<a  class="buy" href="" aria-label="кнопка купить"> купить </a>
 				</li>
 
 
 				<li>
 				<a href="#"> 
-				<h3> <span>Глина для укладки волос </span>
+				<h3> <span class="first">Глина для укладки волос </span>
 				<span> «American crew» </span> </h3>
 
 				<img src="img/shop-product4.jpg" width="220" height="165" alt="Глина"> 
 			    </a>
 
-				<b> 500 p </b> 
-				<a href="" aria-label="кнопка купить"> купить </a>
+				<b class="price"> 500 p </b> 
+				<a class="buy" href="" aria-label="кнопка купить"> купить </a>
 				</li>
+
+
 
 				<li>
 				<a href="#">
-				<h3> <span> Гель для волос </span>
+				<h3> <span class="first"> Гель для волос </span>
 				<span> «AMERICAN CREW» </span> </h3>
 				<img src="img/shop-product5.jpg" width="220" height="165" alt="Гель для волос"> </a>
 
-				<b> 300 p </b> 
-				<a href="" aria-label="кнопка купить"> купить </a>
+				<b class="price"> 300 p </b> 
+				<a class="buy" href="" aria-label="кнопка купить"> купить </a>
 				</li>
 
 
 
 				<li>
 				<a href="#">
-				<h3> <span> Набор для бритья </span>
+				<h3> <span class="first"> Набор для бритья </span>
 				<span> «Baxter of California» </span> </h3>
 
 				<img src="img/shop-product6.jpg" width="220" height="165"  alt="Набор бритья"> 
 			</a>
 
 
-				<b> 3900 p </b> 
-				<a href="" aria-label="кнопка купить"> купить </a>
+				<b class="price"> 3900 p </b> 
+				<a  class="buy" href="" aria-label="кнопка купить"> купить </a>
 				</li>
 			</ul>
+
+
+
 
 			</section>
 
 
-			<div>
-				<a href=""> 1 </a>
-				<a href=""> 2 </a>
-				<a href=""> 3 </a>
-				<a href=""> 4 </a>
+
+			<div class="pages">
+				<a  href="#"> 1 </a>
+				<a  class="selected" href="#"> 2 </a>
+				<a  href="#"> 3 </a>
+				<a  href="#"> 4 </a>
 			</div>
 
-			<footer>
-	<p> Барбершоп "Бородинский" <br>
-		Адрес: г.Санк-Петербург, ул.Б.Конюшенная, д.19/8 <br>
-		<a href="map.html"> Как нас найти? </a>
-		телефон:+7(495)666-02-66
-	</p>
 
-	<div>
-		<b> Давайте дружить! </b>
-		<ul>
-			<li> <a href="#"> <img src="img/vk.svg" width="43" height="43" alt="Логотип сайта Вконтакте"> vkontakte </a> </li>
-			<li> <a href="#"><img src="img/facebook.svg" width="43" height="43" alt="Логотип сайта фейсбук"> face </a> </li>
-			<li> <a href="#"><img src="img/instagram.svg" width="43" height="43" alt="Логотип сайта инстаграм "> inst </a> </li>
-		</ul>
-
-	</div>
-
-	<p> Разработано: 
-	<a  class="" href="html.academy.ru"> HTML Academy </a>
-    </p>
-	
-
-</footer>
+</main>
 
 
+
+
+				<footer class="main-footer">
+						<p class="footer-contacts"> Барбершоп "Бородинский" <br>
+							Адрес: г.Санк-Петербург, ул.Б.Конюшенная, д.19/8 <br>
+							<a class="footer-map" href="map.html"> Как нас найти? </a>
+							телефон:+7(495)666-02-66
+						</p>
+
+				<div class="footer-social">
+					<b> Давайте дружить! </b>
+					<ul class="social">
+						<li class="social-button">
+							 <a href="#"> <img src="img/vk.svg" width="27" height="15" alt="Логотип сайта Вконтакте">  </a> 
+						</li>
+						<li class="social-button"> 
+							<a href="#"><img src="img/facebook.svg" width="27" height="15"></a>
+						</li>
+						<li class="social-button"> <a href="#"><img src="img/instagram.svg" width="27" height="15" alt="Логотип сайта инстаграм "> </a> </li>
+					</ul>
+
+				</div>
+
+						<p class="footer-copyright"> Разработано: <br>
+							<a  class="button" href="html.academy.ru"> HTML Academy </a>
+						</p>
+
+
+					</footer>
+
+
+<!-- pop up -->
+
+	<section>
+  		<p>  введите свои логин и пароль</p>
+		<form action="" method="post">
+			<label for="name"> логин </label>
+			<input type="text" name="name1" id="name" placeholder="логин">
+			
+
+			<label for="password"> пароль </label>
+			<input type="password" name="password1" id="password" placeholder="пароль">
+
+			<label for="remember"> Запомни меня </label>
+			<input type="checkbox" name="remember1" id="remember">
+
+			<a href="#"> Я забыл пароль </a>
+
+			<button type="subbmit"> отправить </button>
+			<button type="button"> закрыть </button>
+
+		</form>
+	</section>
 
 
 
